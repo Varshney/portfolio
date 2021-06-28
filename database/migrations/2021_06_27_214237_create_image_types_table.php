@@ -14,8 +14,9 @@ class CreateImageTypesTable extends Migration
     public function up()
     {
         Schema::create('image_types', function (Blueprint $table) {
-            $table->integer("images_id");
-            $table->integer("types_id");
+            $table->id();
+            $table->text("name", 20);
+            $table->text("ja_name", 20);
         });
     }
 
